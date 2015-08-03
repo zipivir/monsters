@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+  <title>Monsters</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id='header'>
+  <span id='monst_title'> <h1>מפלצות בע"מ</h1> </span>
+  <span id='monst_img'>
+	<%= image_tag("monsters_images/monster1.jpg", :size => "", :title => "", :id => 'monster_logo1') %>
+  </span>
+</div>
+
+<%= yield %>
+
+<div class='change_logo'><%= link_to_function "שנה לוגו מפלצת", "change_logo()" %> </div>
+</body>
+</html>

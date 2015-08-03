@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Zone:</b>
+  <%= @monster.zone %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @monster.color %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @monster.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_monster_path(@monster) %> |
+<%= link_to 'Back', monsters_path %>

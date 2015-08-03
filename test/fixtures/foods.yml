@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  monster_food: 
+  name: MyString
+  taste: MyString
+
+two:
+  monster_food: 
+  name: MyString
+  taste: MyString

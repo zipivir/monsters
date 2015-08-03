@@ -1,0 +1,35 @@
+<%= form_for(@monster) do |f| %>
+  <% if @monster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@monster.errors.count, "error") %> prohibited this monster from being saved:</h2>
+
+      <ul>
+      <% @monster.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :שם המפלצת הנחמדת %><br />
+    <%= f.text_field :משצק %>
+  </div>
+  <div class="field">
+    <%= f.label :אזור %><br />
+    <%= f.select :zone, options_for_select(@zones) %>
+  </div>
+  <div class="field">
+    <%= f.label :צבע %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :מאכלים אהובים %><br />
+    <% @foods.each do |food|%>
+      <%= check_box_tag "[foods_monsters]#{food.id}",food.name %>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'צור מפלצת' %>
+  </div>
+<% end %>

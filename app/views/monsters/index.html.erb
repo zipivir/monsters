@@ -1,0 +1,24 @@
+<%= link_to 'צור מפלצת חדשה', new_monster_path %>
+
+<table border='2' id='monsters_table'>
+  <tr>
+    <th>שם המפלצת</th>
+    <th>אזור</th>
+    <th>אוכל אהוב</th>
+    <th>פעולות</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @monsters.each do |monster| %>
+  <tr>
+    <td><%= monster.name %></td>
+    <td><%= monster.zone.description %></td>
+    <td><%= monster.name %></td>
+    <td><%= link_to 'Edit', edit_monster_path(monster) %>
+    <%= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
